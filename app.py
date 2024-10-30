@@ -1,7 +1,7 @@
+
 import pandas as pd
-pip install streamlit pandas scipy xlsxwriter
 import numpy as np
-from scipy.optimize import linprog
+from scipy.optimize import ling prog
 import streamlit as st
 import xlsxwriter
 
@@ -121,7 +121,4 @@ if st.button("Re-optimize"):
     st.success("Optimization performed successfully")
     st.dataframe(data)
 
-    # Export results to Excel
-    with pd.ExcelWriter('session_limits_results.xlsx', engine='xlsxwriter') as writer:
-        data.to_excel(writer, sheet_name='Session Limits', index=False)
-    st.success("Results exported to session_limits_results.xlsx")
+
