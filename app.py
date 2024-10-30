@@ -1,4 +1,5 @@
 import pandas as pd
+pip install streamlit pandas scipy xlsxwriter
 import numpy as np
 from scipy.optimize import linprog
 import streamlit as st
