@@ -1,4 +1,3 @@
-
 import pandas as pd
 import numpy as np
 from scipy.optimize import linprog
@@ -120,5 +119,11 @@ if st.button("Re-optimize"):
     data['Optimized Sessions'] = solution
     st.success("Optimization performed successfully")
     st.dataframe(data)
+
+    # Export results to Excel
+    with pd.ExcelWriter('session_limits_results.xlsx', engine='xlsxwriter') as writer:
+        data.to_excel(writer, sheet_name='Session Limits', index=False)
+    st.success("Results exported to session_limits_results.xlsx")
+
 
 
