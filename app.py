@@ -1,7 +1,7 @@
 
 import pandas as pd
 import numpy as np
-from scipy.optimize import lingprog
+from scipy.optimize import linprog
 import streamlit as st
 import xlsxwriter
 
